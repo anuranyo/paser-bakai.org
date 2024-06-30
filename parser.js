@@ -15,10 +15,7 @@ async function handleURL(event) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const data = await response.json();
-        document.getElementById('message').innerText = data.message;
-        document.getElementById('downloadLink').innerHTML = `<a href="http://localhost:3000/download?file=${data.file}">Download PDF</a>`;
     } catch (error) {
         console.error('Error:', error);
-        document.getElementById('message').innerText = `Error: ${error.message}`;
     }
 }

@@ -10,7 +10,7 @@ const sharp = require('sharp');
 const { execFileSync } = require('child_process');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const downloadDir = path.join(__dirname, 'download');
 const tempDir = path.join(__dirname, 'temp');
